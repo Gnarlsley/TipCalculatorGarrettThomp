@@ -1,0 +1,27 @@
+﻿@model TipInput
+@{
+    ViewBag.Title = "Tip Calculator";
+}
+
+<div class="container">
+    <header class="jumbotron">
+        <h1 class="mt-3">@ViewBag.Title</h1>
+    </header>
+
+    <main>
+        <form asp-action="Index" method="post">
+            <div class="row">
+                <label asp-for="MealCost" class="custom-control-label col-3">Enter cost of Meal:</label>
+                <input asp-for="MealCost" class="form-control col-3" />
+                <span asp-validation-for="MealCost" class="text-danger col"></span>
+            </div>
+            <div class="row">
+                <div class="col offset-3 p-lg-0">
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                    <a asp-action="Index" class="btn btn-secondary">Clear</a>
+                </div>
+            </div>
+        </form>
+    </main>
+
+</div>
