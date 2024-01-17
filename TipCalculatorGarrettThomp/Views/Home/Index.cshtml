@@ -11,9 +11,13 @@
     <main>
         <form asp-action="Index" method="post">
             <div class="row">
-                <label asp-for="MealCost" class="custom-control-label col-3">Enter cost of Meal:</label>
+                <label class="custom-control-label col-3">Enter cost of Meal:</label>
                 <input asp-for="MealCost" class="form-control col-3" />
                 <span asp-validation-for="MealCost" class="text-danger col"></span>
+            </div>
+            <div class="row">
+                <label class="custom-control-label col-3">15% Tip: </label>
+                <label class="custom-control-label col-3">"@(ViewBag.tipAmount ? "Hello" : "Goodbye")" </label>
             </div>
             <div class="row">
                 <div class="col offset-3 p-lg-0">

@@ -3,15 +3,17 @@
     public class TipInput
     {
         public double MealCost { get; set; }
+        public double tipFifteen { get; set; }
+        public double tipTwenty { get; set; }
+        public double tipTwentyFive { get; set; }
 
-        public double[] CalculateTip()
+
+        public void CalculateTip()
         {
             double cost = MealCost;
-            double tipFifteen = cost * .15;
-            double tipTwenty = cost * .2;
-            double tipTwentyFive = cost * .25;
-            double[] tipAmounts = {tipFifteen, tipTwenty, tipTwentyFive};
-            return tipAmounts;
+            tipFifteen = cost * .15;
+            tipTwenty = cost * .2;
+            tipTwentyFive = cost * .25;
         }
 
 

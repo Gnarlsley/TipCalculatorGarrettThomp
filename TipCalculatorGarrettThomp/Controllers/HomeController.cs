@@ -8,7 +8,7 @@ namespace TipCalculatorGarrettThomp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.tipAmount = "";
+            ViewBag.tipAmount = false;
             return View();
         }
 
@@ -17,11 +17,11 @@ namespace TipCalculatorGarrettThomp.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.tipAmount = tip.CalculateTip();
+                ViewBag.tipAmount = true;
             }
             else
             {
-                ViewBag.tipAmount = "";
+                ViewBag.tipAmount = false;
             }
             return View();
         }
