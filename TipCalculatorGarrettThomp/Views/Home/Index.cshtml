@@ -17,7 +17,15 @@
             </div>
             <div class="row">
                 <label class="custom-control-label col-3">15% Tip: </label>
-                <label class="custom-control-label col-3">"@(ViewBag.tipAmount ? "Hello" : "Goodbye")" </label>
+                <label class="custom-control-label col-3">@ViewBag.tipFifteen.ToString("C2")</label>
+            </div>
+            <div class="row">
+                <label class="custom-control-label col-3">20% Tip: </label>
+                <label class="custom-control-label col-3">@ViewBag.tipTwenty.ToString("C2")</label>
+            </div>
+            <div class="row">
+                <label class="custom-control-label col-3">25% Tip: </label>
+                <label class="custom-control-label col-3">@ViewBag.tipTwentyFive.ToString("C2")</label>
             </div>
             <div class="row">
                 <div class="col offset-3 p-lg-0">
